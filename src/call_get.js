@@ -68,7 +68,7 @@ getGetter = function(name) {
 
 function ensureMethod(obj, methodName) {
     var fn;
-    if (obj != null) fn = obj[methodName];
+    if (obj !== null) fn = obj[methodName];
     if (typeof fn !== "function") {
         var message = "Object " + util.classString(obj) + " has no method '" +
             util.toString(methodName) + "'";
