@@ -62,7 +62,7 @@ Context.activateLongStackTraces = function() {
     Promise._peekContext = Promise.prototype._peekContext = peekContext;
     Promise.prototype._promiseCreated = function() {
         var ctx = this._peekContext();
-        if (ctx && ctx._promiseCreated == null) ctx._promiseCreated = this;
+        if (ctx && ctx._promiseCreated === null) ctx._promiseCreated = this;
     };
 };
 return Context;
