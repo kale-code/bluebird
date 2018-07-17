@@ -117,8 +117,8 @@ if (args.file) {
             var failText = 'OOM';
             if (r.data.timeout) failText = 'T/O';
             return [path.basename(r.file),
-                r.data.mem != null ? r.data.time: failText,
-                r.data.mem != null ? r.data.mem.toFixed(2) : failText]
+                r.data.mem !== null ? r.data.time: failText,
+                r.data.mem !== null ? r.data.mem.toFixed(2) : failText]
         });
 
         res = [['file', 'time(ms)', 'memory(MB)']].concat(res)
