@@ -12,7 +12,7 @@ function catchFilter(instances, cb, promise) {
             var item = instances[i];
 
             if (item === Error ||
-                (item != null && item.prototype instanceof Error)) {
+                (item !== null && item.prototype instanceof Error)) {
                 if (e instanceof item) {
                     return tryCatch(cb).call(boundTo, e);
                 }
